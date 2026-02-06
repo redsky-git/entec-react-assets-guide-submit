@@ -1,44 +1,84 @@
-# Website
+# ENTEC React Assets Guide
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+ENTEC React Assets 프레임워크의 개발 가이드 문서 사이트입니다.  
+이 웹사이트는 [Docusaurus](https://docusaurus.io/)를 사용하여 구축되었습니다.
 
-## Installation
+## 📋 사전 요구사항
 
-```bash
-yarn
-```
+프로젝트를 실행하기 전에 다음 항목들이 설치되어 있어야 합니다:
 
-## Local Development
+- **Node.js**: 20.0 이상 (권장: LTS 버전)
+- **npm** 또는 **yarn**: 패키지 관리자
 
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
+### Node.js 버전 확인
 
 ```bash
-yarn build
+node --version
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+버전이 20.0 미만이거나 설치되지 않은 경우, [Node.js 공식 웹사이트](https://nodejs.org/)에서 다운로드하여 설치하세요.
 
-## Deployment
+## 🚀 프로젝트 설치 및 실행
 
-Using SSH:
+### 1. 프로젝트 클론
 
 ```bash
-USE_SSH=true yarn deploy
+git clone <repository-url>
+cd entec-react-assets-guide-submit
 ```
 
-Not using SSH:
+### 2. 의존성 패키지 설치
+
+npm을 사용하는 경우:
 
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+npm install
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### 3. 로컬 개발 서버 실행
+
+npm을 사용하는 경우:
+
+```bash
+npm run start
+```
+
+
+이 명령어는 로컬 개발 서버를 시작하고 자동으로 브라우저를 엽니다.  
+기본적으로 `http://localhost:3000`에서 실행됩니다.  
+대부분의 변경사항은 서버를 재시작하지 않아도 실시간으로 반영됩니다.
+
+## 📦 빌드
+
+프로덕션용 정적 파일을 생성하려면:
+
+npm을 사용하는 경우:
+
+```bash
+npm run build
+```
+
+
+이 명령어는 `build` 디렉토리에 정적 콘텐츠를 생성합니다.  
+생성된 파일은 정적 호스팅 서비스를 통해 배포할 수 있습니다.
+
+### 빌드 결과 로컬 확인
+
+빌드된 결과물을 로컬에서 확인하려면:
+
+npm을 사용하는 경우:
+
+```bash
+npm run serve
+```
+
+
+
+## 🔧 추가 명령어
+
+- **캐시 정리**: `npm run clear` 또는 `yarn clear`
+- **타입 체크**: `npm run typecheck` 또는 `yarn typecheck`
+
 
 
 # 프로젝트 폴더구조
